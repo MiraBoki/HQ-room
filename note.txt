@@ -1,0 +1,155 @@
+https://firebase.google.com/ > Docs > Overview > Firebase Fundamentals >
+Web icon > Available Firebase services for web > Cloud Firestore for Web
+
+npm init or  npm init -y
+npm install firebase or  npm install firebase@latest
+
+
+=> How to use Vite
+
+1. Install 
+    npm install --save-dev vite 
+
+2. Create a new file as vite.config.js
+
+    import { defineConfig } from 'vite';
+
+    export default defineConfig({
+        root: './src',
+        build:{
+            outDir:'../dist', 
+        }
+    });
+
+3. Update package.json
+    "scripts": {
+        "dev":"vite",
+        "build":"vite build"
+    },
+
+4. Run Build the app for production
+    npm run build
+
+5. Run Vite in development server
+    npm run dev
+
+
+------------------------------------------
+
+=> Install Express
+
+npm install express   or   npm install express@latest 
+
+nodemon server.js
+
+=> import 
+
+import express from 'express';
+
+------------------------------------------
+=> Email/Password Enable Authentication
+Make sure you have enable Email/Password authentication in your Firebase Console.
+
+Authentication > Sign-in Method 
+Ensure Email/Password is enabled.
+Save the changes
+
+
+=> Enable Google Sign-In in Firebase Console
+
+Authentication > Sign-in Method 
+Ensure Google under the list of providers
+
+Public-facing name for project = your firebase project ids
+Support email for project = your firebase gmail address
+Save the changes
+
+------------------------------------------
+
+=> Customize the Password Reset Email Template
+you can customize the password reset email link to redirected user to a specific page in your app.
+
+Authentication > Templates > Password reset > click Edit pen 
+
+------------------------------------------
+
+=> How to install Tailwind Css
+
+1.Install Tailwind CSS
+https://tailwindcss.com/docs/installation/using-postcss
+
+npm install -D tailwindcss postcss autoprefixer
+
+npx tailwindcss init ( this create a tailwind.config.js file in your project )
+
+2. Add Tailwind to your PostCSS configuration
+
+create postcss.config.js manually ( Note:: do not forget to export as ES6 )
+
+export default {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  }
+}
+
+3. Configure your template paths
+
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./src/**/*.{html,js}"
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+4. Add the Tailwind directives to your CSS
+create a css file located to ( eg. src/css/main.css )
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+npm run build
+npm run dev 
+
+5. include css link to each html file 
+<link rel="stylesheet" href="./css/main.css" type="text/css" />
+
+------------------------------------------
+=> How to install Date-fns
+
+1. Install
+https://date-fns.org/docs/Getting-Started
+
+npm install date-fns --save
+
+2. Import in src/main.js or src/js/uielement.js and src/js/lielement.js
+
+import { format } from "date-fns";
+
+const formatteddate = format(new Date(createdtime),'do MMM yyyy');
+
+------------------------------------------
+=> Install FontAwesome 6
+
+1. Install
+
+npm install @fortawesome/fontawesome-free
+
+2. Import in src/main.js or src/js/authsignin.js and src/js/app.js
+
+import "@fortawesome/fontawesome-free/css/all.css";
+
+------------------------------------------
+
+=> Deploy on Cloud Server 
+
+1. your project need Repo public/private to Github
+
+2.
+
+------------------------------------------
